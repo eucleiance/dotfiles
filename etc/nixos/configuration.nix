@@ -4,9 +4,9 @@
 
 { config, pkgs, lib, ... }:
 
-let
-  unstable-pkgs = import <nixpkgs-unstable> { config.allowUnfree = true; };
-in
+# let
+#   unstable-pkgs = import <nixpkgs-unstable> { config.allowUnfree = true; };
+# in
 {
   imports =
     [
@@ -514,13 +514,14 @@ in
     ffmpeg
     #libav
 
-  ] ++ (with unstable-pkgs; [
-    #alacritty # <---- put your unstable package here
-    zed-editor
-    obsidian
-    vscode
-    vscodium
-  ]);
+  ];
+  # ++ (with unstable-pkgs; [
+  #   #alacritty # <---- put your unstable package here
+  #   zed-editor
+  #   obsidian
+  #   vscode
+  #   vscodium
+  # ]);
 
   fonts.fontDir.enable = true;
   fonts.packages = with pkgs; [
