@@ -1,0 +1,13 @@
+#!/home/coldbrewrosh/.nix-profile/bin/zsh
+
+# Define lta function
+lt() {
+    local level="${1:-2}"  # Set default value to 2 if no argument is provided
+    if [[ $# -gt 0 ]]; then
+        shift  # Remove the first argument ($1) from the argument list if an argument is provided
+    fi
+    tree --gitignore -L "$level" "$@"
+}
+
+# Call the function with all passed arguments
+lt "$@"

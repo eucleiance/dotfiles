@@ -1,0 +1,18 @@
+#!/home/coldbrewrosh/.nix-profile/bin/zsh
+
+if [ "$#" -ne 1 ]; then
+    echo "Usage: g+++ <filename.cpp>"
+    exit 1
+fi
+
+filename="$1"
+filename_without_extension="${filename%.*}"
+executable="execs/${filename_without_extension}"
+
+# Check if the 'execs' directory exists, if not, create it
+if [ ! -d "execs" ]; then
+    mkdir execs
+fi
+
+# Compile the C++ file and execute the resulting executable
+g++ -o "$executable" "$filename" && ./"$executable"

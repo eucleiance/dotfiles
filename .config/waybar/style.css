@@ -1,0 +1,165 @@
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#waybar {
+  background: rgba(1, 1, 1, 0);
+  color: #eeeeef;
+  font-size: 14px;
+  font-family: "Meslo";
+}
+
+#workspaces button {
+  margin: 0px 3px 0px 3px;
+  font-size: 20px;
+  padding: 0px 0px 0px 0px;
+}
+
+#workspaces button:hover {
+  outline: none;
+  /* background-color: none; */
+}
+
+#workspaces button.persistent {
+  /* color: teal; */
+  color: snow;
+}
+
+#workspaces button.empty {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Fix: active workspace doesn't show up */
+/* #workspaces button.focused { */
+#workspaces button.active {
+  color: #c95562;
+}
+
+
+/* #workspaces:hover,
+#workspaces:focus {
+  border: none;
+  outline: 0;
+  background-color: transparent;
+} */
+
+/* #custom-powermenu, */
+#cpu,
+#temperature,
+#memory,
+#workspaces,
+#clock,
+#window,
+#disk,
+#pulseaudio,
+#battery,
+#custom-updates,
+#network {
+  padding: 4px 8px;
+  background-color: rgba(10, 10, 10, 0.8);
+  font-weight: 600;
+  /* backdrop-filter: blur(1); */
+  /* background-color: #303643; */
+  border-radius: 40px;
+  margin: 4px 4px;
+  /* color: mediumturquoise; */
+  color: whitesmoke;
+}
+
+#custom-powermenu {
+  margin: 3px 0px 0px 5px;
+}
+
+#window {
+  padding-left: 6px;
+  /* color: #929db1; */
+}
+
+#tray {
+  margin: 2px 0px 0px 0px;
+}
+
+#custom-updates {
+  color: #1788e4;
+}
+
+#custom-powermenu {
+  color: #e06c75;
+  padding-right: 11px;
+  margin-right: 8px;
+}
+
+#scratchpad {
+  color: #cffafe;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+#pulseaudio {
+  /* color: #0fb9b1; */
+  padding-right: 14px;
+}
+
+#battery {
+  /* background-color: #ffffff; */
+  /* color: #000000; */
+  padding-right: 0px;
+}
+
+k #battery.charging,
+#battery.plugged {
+  /* color: #ffffff; */
+  /* background-color: #26A65B; */
+  padding-right: 12px;
+}
+
+#battery.critical:not(.charging) {
+  background-color: #f53c3c;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* #cpu { */
+/*   color: mediumturquoise; */
+/* } */
+
+/* #disk { */
+/* color: seashell; */
+/* } */
+
+/* #temperature { */
+/*   color: #98c379; */
+/* } */
+#temperature.critical {
+  color: crimson;
+}
+
+#memory {
+  /* color: mediumseagreen; */
+  /* color: #0fb9b1; */
+  padding-right: 12px;
+}
+
+#network {
+  /* background-color: #2980b9; */
+  padding-right: 12px;
+}
+
+#network.disconnected {
+  background-color: #a81d2f;
+}
+
+#clock {
+  /* color: #fff; */
+  margin-left: 8px;
+  /* opacity: 0.7; */
+  /* font-size: 18px; */
+}

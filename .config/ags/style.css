@@ -1,0 +1,63 @@
+window.bar {
+  background-color: rgba(0, 0, 0, 0);
+  color: dimgrey;
+  /* min-height: 0px; */
+  /* margin: 0px 60px 0px 60px; */
+}
+
+button {
+  min-width: 0;
+  min-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: snow;
+  border-radius: 200px;
+  font-size: 14px;
+  color: black;
+  margin: 0px;
+}
+
+button:active {
+  background-color: white;
+}
+
+button:hover {
+  color: pink;
+  /* border-bottom: 3px solid black; */
+}
+
+label {
+  font-weight: bold;
+}
+
+.workspaces button {
+  font-size: 16px;
+}
+
+.workspaces button.empty {
+  background-color: dimgrey;
+}
+
+.workspaces button.focused {
+  background-color: darkturquoise;
+}
+
+.workspaces button:hover {
+  border-bottom: 3px solid black;
+}
+
+.client-title {
+  color: snow;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 100px;
+  padding: 0px 12px;
+}
+
+.notification {
+  color: yellow;
+}
+
+levelbar block,
+highlight {
+  min-height: 10px;
+}
