@@ -20,12 +20,10 @@
 }
 
 #workspaces button:hover {
-  outline: none;
-  /* background-color: none; */
+  background: none;
 }
 
 #workspaces button.persistent {
-  /* color: teal; */
   color: snow;
 }
 
@@ -33,21 +31,11 @@
   color: rgba(255, 255, 255, 0.4);
 }
 
-/* Fix: active workspace doesn't show up */
-/* #workspaces button.focused { */
 #workspaces button.active {
   color: #c95562;
 }
 
 
-/* #workspaces:hover,
-#workspaces:focus {
-  border: none;
-  outline: 0;
-  background-color: transparent;
-} */
-
-/* #custom-powermenu, */
 #cpu,
 #temperature,
 #memory,
