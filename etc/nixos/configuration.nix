@@ -405,6 +405,8 @@
     #gnome.nautilus  # Gnome File Manager
     obs-studio
     libreoffice
+    zoom-us
+    whatsapp-for-linux
 
     # --- Dev Tools ---
     vim
