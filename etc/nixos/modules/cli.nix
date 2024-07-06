@@ -8,6 +8,7 @@
       bat
       ripgrep
       tree
+      stow
 
     ])
     ++
