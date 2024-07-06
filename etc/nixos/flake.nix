@@ -24,6 +24,8 @@
           modules = [
             ./configuration.nix
             ./modules/unstable.nix
+            ./modules/cli.nix
+            # Remember to (git add .) after adding new modules
           ];
           specialArgs = {
             inherit username;

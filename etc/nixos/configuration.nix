@@ -419,13 +419,11 @@
     #vscode-fhs
     #vscodium
     #vscodium-fhs
-    tree
     #neovide
     #	xclip       # Only works in X11 & Not in Wayland
     wl-clipboard # Works in Wayland
     grim
     slurp
-    ripgrep
     lazygit
     nodejs_22
     nodePackages_latest.live-server
@@ -439,8 +437,6 @@
     stylua
 
     # --- QOL ---
-    zoxide
-    fzf
     qalculate-qt
     kdePackages.okular
 

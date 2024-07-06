@@ -110,6 +110,15 @@
       ltt() {
           tree --gitignore "$@"
       }
+
+      ff() {
+          local file
+          file=$(fzf --preview="bat --color=always {}")
+          if [ -n "$file" ]; then
+              # Change directory to the absolute path of the selected file
+              cd "$(cd "$(dirname "$file")" && pwd)"
+          fi
+      }
     '';
 
     zplug = {

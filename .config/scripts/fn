@@ -1,0 +1,7 @@
+#!/home/coldbrewrosh/.nix-profile/bin/zsh
+
+fn() {
+  fzf -m --preview="bat --color=always {}" | xargs -d '\n' nvim
+}
+
+fn
