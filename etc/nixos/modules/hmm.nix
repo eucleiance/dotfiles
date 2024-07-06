@@ -10,17 +10,15 @@
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
-      # pkgs = nixpkgs.legacyPackages.${system};
-      # pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
-      commonArgs = { inherit system; config.allowUnfree = true; };
-      pkgs-stable = import nixpkgs commonArgs;
-      pkgs-unstable = import nixpkgs-unstable commonArgs;
+      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
       username = "coldbrewrosh";
       name = "Rosh";
     in
     {
       nixosConfigurations = {
         nixos = lib.nixosSystem {
+          inherit system;
           modules = [
             ./configuration.nix
             ./modules/unstable.nix
@@ -28,7 +26,6 @@
           specialArgs = {
             inherit username;
             inherit name;
-            inherit pkgs-stable;
             inherit pkgs-unstable;
           };
         };
