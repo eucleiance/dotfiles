@@ -139,13 +139,13 @@
     xwayland.enable = true;
   };
   services = {
+    displayManager = {
+      sddm.enable = true;
+      sddm.wayland.enable = true;
+      defaultSession = "hyprland";
+    };
     xserver = {
       enable = true;
-      displayManager = {
-        sddm.enable = true;
-        sddm.wayland.enable = true;
-        defaultSession = "hyprland";
-      };
       desktopManager = {
         plasma5.enable = true;
         #gnome.enable = true;
@@ -312,10 +312,6 @@
   # services.xserver.desktopManager.plasma5.enable = true;
 
   # Configure keymap in X11
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "";
-  };
 
 
   # Enable CUPS to print documents.
@@ -342,7 +338,14 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
+
+  services.xserver = {
+    xkb = {
+      variant = "";
+      layout = "us";
+    };
+  };
+  services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.coldbrewrosh = {
@@ -490,7 +493,7 @@
     brightnessctl # Brightness
     #pulseaudio
     pavucontrol
-    eww-wayland # eww bar
+    #eww-wayland # eww bar
     ags
     libdbusmenu-gtk3
     libdbusmenu
