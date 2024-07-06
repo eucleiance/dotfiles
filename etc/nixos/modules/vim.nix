@@ -4,11 +4,11 @@
   environment.systemPackages =
     (with pkgs-stable; [
       # List of stable packages (if any)
-
+      #vimPlugins.coc-tailwindcss
+      vscodium-fhs
+      vscode-fhs
     ])
     ++
     (with pkgs-unstable; [
-      obsidian
-      zed-editor
     ]);
 }

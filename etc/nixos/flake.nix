@@ -25,6 +25,7 @@
             ./configuration.nix
             ./modules/unstable.nix
             ./modules/cli.nix
+            ./modules/vim.nix
             # Remember to (git add .) after adding new modules
           ];
           specialArgs = {
