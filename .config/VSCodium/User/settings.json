@@ -361,7 +361,7 @@
   "breadcrumbs.enabled": false,
   "editor.detectIndentation": true,
   "whichkey.delay": 10,
-  "workbench.colorTheme": "Bearded Theme feat. Melle Julie",
+  "workbench.colorTheme": "Bearded Theme Arc Eggplant",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -394,11 +394,15 @@
     "activityBar.foreground": "#FFFFFF",
     "activityBar.inactiveForeground": "#999999",
     "sideBarSectionHeader.foreground": "#FFFFFF",
-    "sideBar.foreground": "#FFFFFF",
+    "sideBar.foreground": "#AAAAAA",
     "sideBarTitle.foreground": "#FFFFFF",
 
     "list.inactiveSelectionForeground": "#FFFFFF",
     "list.activeSelectionForeground": "#FFFFFF",
+
+    "list.focusBackground": "#55555500",
+    "list.focusForeground": "#FFFFFF",
+    "list.focusOutline": "#FFFFFF77",
 
     "tree.indentGuidesStroke": "#AAAAAA",
     
