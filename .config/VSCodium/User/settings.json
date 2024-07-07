@@ -419,3 +419,20 @@
     "editorIndentGuide.background1": "#FFFFFF22"
   },
 }
+// K / gh      -> Hover Eqv.
+// Leader + st -> Show Themes
+// Leader + sk -> Show Keybindings
+// Leader + space -> Find Files (Telescope Eqv.)
+// Leader + /  -> Find in files (Grep Eqv.)
+// Leader + sr -> Start Find & Replace
+// Leader + bp -> Pin Buffer
+// Leader + bP -> Delete non-pinned buffers
+// Leader + bu -> Unpin Buffer
+// Leader + cf -> Code Format
+// ft     -> Open Terminal
+
+// gd     -> Goto Definition
+// gr     -> Goto References
+// gD     -> Goto Declaration
+// gI     -> Goto Implementation
+// gy     -> Goto T(y)pe definition
