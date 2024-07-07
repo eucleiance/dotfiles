@@ -13,6 +13,7 @@
   "vim.leader": "<space>",
   "vim.handleKeys": {
       "<C-n>": false,
+      "<CR>":false,
     },
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -21,24 +22,23 @@
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
-
     {
       "before": ["<leader>"],
       "commands": ["whichkey.show"]
     },
     {
       "before": [":", "w", "<CR>"],
-      "commands": ["workbench.action.files.save"]
-    },
-    {
-      "before": ["<leader>", "w"],
-      "commands": ["workbench.action.files.save"]
-    },
-    {
-      "before": ["<leader>", "q"],
-      "commands": ["workbench.action.closeWindow"],
-      "when": "workbench.action.closeWindow"
-    },
+    "commands": ["workbench.action.files.save"]
+  },
+  {
+    "before": ["<leader>", "w"],
+    "commands": ["workbench.action.files.save"]
+  },
+  {
+    "before": ["<leader>", "q"],
+    "commands": ["workbench.action.closeWindow"],
+    "when": "workbench.action.closeWindow"
+  },
 
   ],
   "vim.normalModeKeyBindings": [

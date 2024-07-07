@@ -1,3 +1,12 @@
 // Place your key bindings in this file to override the defaults
 [
+  {
+    "key": "enter",
+    "command": "nerdtree.openFileNewWindow",
+    // Taken From
+    // https://github.com/61130061/NERDTree/compare/v1.0.0...v1.2.0
+    // Original was 
+    // "nerdtree.openFile"
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
+  }
 ]
