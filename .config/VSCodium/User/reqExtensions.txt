@@ -1,0 +1,6 @@
+NERDTREE -> llam4u
+VIM -> vscodevim
+Which Key -> VSpaceCode
+
+Tailwind CSS Intellisence -> bradlc   ->  Tailwind LSP
+POSTCSS Language Support -> csstools  ->  @apply rules and other errors mitigation
