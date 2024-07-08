@@ -358,34 +358,39 @@
   "tailwindCSS.emmetCompletions": true,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "phase",
-  "breadcrumbs.enabled": false,
   "editor.detectIndentation": true,
   "whichkey.delay": 10,
-  "workbench.colorTheme": "Bearded Theme Monokai Black",
+  "workbench.colorTheme": "Bearded Theme feat. Gold D Raynh",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
         "scope": "punctuation.terminator.statement",
         "settings": {
-          "foreground": "#FFFFFFCC" // Replace with your desired color
+          "foreground": "#FFFFFFCC"
         }
       },
       {
         "scope": "punctuation.separator",
         "settings": {
-          "foreground": "#FFFFFFCC" // Replace with your desired color
+          "foreground": "#FFFFFFCC"
         }
       },
       {
         "scope": "comment",
         "settings": {
-          "foreground": "#FFFFFF66" // Replace with your desired color
+          "foreground": "#FFFFFF66" // Comment Test
         }
       },
       {
         "scope": "keyword.operator",
         "settings": {
-          "foreground": "#FFFFFFCC" // Replace with your desired color
+          "foreground": "#FFFFFFCC"
+        }
+      },
+      {
+        "scope": "",
+        "settings": {
+          "foreground": "#FF0000"
         }
       }
     ]
@@ -414,6 +419,7 @@
     "editorLineNumber.activeForeground": "#FFFFFFEE",
     "editorIndentGuide.activeBackground1": "#FFFFFF66",
     "editorIndentGuide.background1": "#FFFFFF22",
+    // "foreground": "#ffffff",
     // "statusBar.background": "#005f5f",
     // "statusBar.noFolderBackground": "#005f5f",
     // "statusBar.debuggingBackground": "#005f5f",
