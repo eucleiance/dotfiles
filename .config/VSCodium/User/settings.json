@@ -1183,5 +1183,5 @@
   "workbench.activityBar.location": "bottom",
   "window.customTitleBarVisibility": "auto",
   "workbench.editor.editorActionsLocation": "titleBar",
-  "editor.minimap.enabled": false
+  "editor.minimap.enabled": false,
 }

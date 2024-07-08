@@ -101,3 +101,8 @@ function! s:formatSelectedLines()
 endfunction
 
 xnoremap <silent> = :<C-u>call <SID>formatSelectedLines()<CR>
+
+" Make Searches Case-Insensitive
+set ignorecase
+" Make Searched Case-Sensitive if the search contains UpperCase Letter
+set smartcase
