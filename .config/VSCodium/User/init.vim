@@ -85,3 +85,19 @@ nmap <S-Tab> :Tabprev<CR>
 inoremap jk <Esc>
 
 set clipboard=unnamedplus
+
+function! s:formatSelectedLines()
+    normal! gv
+    let visualmode = visualmode()
+    if visualmode == "V"
+        let startLine = line("v")
+        let endLine = line(".")
+        call VSCodeNotifyRange("editor.action.formatSelection", startLine, endLine, 1)
+    else
+        let startPos = getpos("v")
+        let endPos = getpos(".")
+        call VSCodeNotifyRangePos("editor.action.formatSelection", startPos[1], endPos[1], startPos[2], endPos[2], 1)
+    endif
+endfunction
+
+xnoremap <silent> = :<C-u>call <SID>formatSelectedLines()<CR>
