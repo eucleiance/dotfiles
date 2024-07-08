@@ -1,13 +1,13 @@
 {
   // open json editor for settings
-  //"workbench.settings.editor": "json",
+  "workbench.settings.editor": "json",
 
   // Theme
-  // "workbench.colorTheme": "Aura Dark",
+  "workbench.colorTheme": "Bearded Theme Monokai Black",
   // "workbench.iconTheme": "moxer-icons",
 
   // Change font
-  "editor.fontFamily": "Meslo LGL",
+  // "editor.fontFamily": "Meslo LGL",
   // "scm.inputFontFamily": "Geist Mono",
   // "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   // "chat.editor.fontFamily": "Geist Mono",
@@ -19,9 +19,6 @@
 
   // Font size
   "editor.fontSize": 14,
-
-  // i am a (mosiac) of (everypne i've ever loved)....
-
   "terminal.integrated.fontSize": 14,
 
   // ui
@@ -102,18 +99,17 @@
   },
 
   // Misc
-  // "workbench.startupEditor": "none",
-  // "explorer.compactFolders": false,
-  // "editor.tabSize": 2,
-  // "editor.linkedEditing": true,
+  "workbench.startupEditor": "none",
+  "explorer.compactFolders": false,
+  "editor.linkedEditing": true,
   "breadcrumbs.filePath": "off",
-  // "files.trimTrailingWhitespace": true,
-  // "[markdown]": {
-  //   "files.trimTrailingWhitespace": false
-  // },
-  // "editor.bracketPairColorization.enabled": true,
-  // "editor.guides.bracketPairs": true,
-  // "window.zoomLevel": 0,
+  "files.trimTrailingWhitespace": true,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "window.zoomLevel": 0,
 
   // Neovim
   "vscode-neovim.neovimInitVimPaths.linux": "/home/coldbrewrosh/dotfiles/.config/VSCodium/User/init.vim",
@@ -1106,7 +1102,6 @@
   "tailwindCSS.emmetCompletions": true,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.detectIndentation": true,
-  "workbench.colorTheme": "Bearded Theme Monokai Black",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -1173,8 +1168,5 @@
   },
   "workbench.activityBar.location": "bottom",
   "window.customTitleBarVisibility": "auto",
-  "workbench.editor.editorActionsLocation": "titleBar",
-  // "editor.renderWhitespace": "all",
-  // "window.menuBarVisibility": "compact",
-  // "window.menuBarVisibility": "compact",
+  "workbench.editor.editorActionsLocation": "titleBar"
 }
