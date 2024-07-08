@@ -2,7 +2,7 @@
   // open json editor for settings
   // "workbench.settings.editor": "json",
   // Theme
-  "workbench.colorTheme": "Bearded Theme Monokai Black",
+  "workbench.colorTheme": "Bearded Theme Monokai Reversed",
   // "workbench.iconTheme": "moxer-icons",
   // Change font
   // "editor.fontFamily": "Meslo LGL",
@@ -1128,6 +1128,25 @@
         "settings": {
           "foreground": "#FF0000"
         }
+      },
+      {
+      "scope": [
+        "meta.section.struct.go variable.other.field.go",
+        "meta.section.struct.go variable.other.declaration.go",
+        "source",
+        "support",
+        "constant.character.entity.named",
+        "meta.jsx.children",
+        "source.lua",
+        "text.html.derivative",
+        "source.graphql meta.selections variable.other.alias.graphql",
+        "source.graphql meta.type.interface.graphql meta.type.object.graphql variable.graphql",
+        "source.graphql variable.arguments.graphql",
+        "JSXNested"
+      ],
+      "settings": {
+        "foreground": "#FFFFFF"
+      }
       }
     ]
   },
