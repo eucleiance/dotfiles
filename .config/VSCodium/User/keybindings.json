@@ -8,5 +8,24 @@
     // Original was 
     // "nerdtree.openFile"
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
-  }
+  },
+  {
+    "key": "ctrl+shift+h",
+    "command": "-workbench.action.replaceInFiles"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "-editor.action.selectHighlights",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+shift+h",
+    "command": "workbench.action.moveEditorLeftInGroup",
+    "when": "vim.active && vim.mode != 'Insert"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "workbench.action.moveEditorRightInGroup",
+    "when": "vim.active && vim.mode != 'Insert"
+  },
 ]

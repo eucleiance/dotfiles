@@ -93,26 +93,26 @@
       "before": ["<A-k>"],
       "commands": ["editor.action.moveLinesUpAction"]
     },
+    // {
+    //   // Prev buffer
+    //   "before": ["<S-h>"],
+    //   "commands": [":bprev"]
+    // },
     {
       // Prev buffer
       "before": ["<S-h>"],
-      "commands": [":bprev"]
+      "commands": ["workbench.action.previousEditor"]
     },
     {
       // Next buffer
       "before": ["<S-l>"],
-      "commands": [":bnext"]
+      "commands": ["workbench.action.nextEditor"]
     },
-    {
-      // Prev buffer
-      "before": ["[", "b"],
-      "commands": [":bprev"]
-    },
-    {
-      // Next buffer
-      "before": ["]", "b"],
-      "commands": [":bnext"]
-    },
+    // {
+    //   // Next buffer
+    //   "before": ["<S-l>"],
+    //   "commands": [":bnext"]
+    // },
     {
       // Redraw / clear hlsearch / diff update
       "before": ["<leader>", "u", "r"],
@@ -361,7 +361,7 @@
   "breadcrumbs.enabled": false,
   "editor.detectIndentation": true,
   "whichkey.delay": 10,
-  "workbench.colorTheme": "Bearded Theme Arc Eggplant",
+  "workbench.colorTheme": "Bearded Theme Monokai Black",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -396,32 +396,32 @@
     "sideBarSectionHeader.foreground": "#FFFFFF",
     "sideBar.foreground": "#AAAAAA",
     "sideBarTitle.foreground": "#FFFFFF",
-
     "list.inactiveSelectionForeground": "#FFFFFF",
     "list.activeSelectionForeground": "#FFFFFF",
-
     "list.focusBackground": "#55555500",
     "list.focusForeground": "#FFFFFF",
     "list.focusOutline": "#FFFFFF77",
-
     "tree.indentGuidesStroke": "#AAAAAA",
-    
-    "statusBar.foreground": "#AAAAAA",
-
+    "statusBar.foreground": "#ffffff",
     "titleBar.activeForeground": "#AAAAAA",
     "titleBar.inactiveForeground": "#FFFFFF",
-
-    "tab.activeForeground": "#FFFFFF", // Color for the text of the active tab
-    "tab.inactiveForeground": "#AAAAAA", // Color for the text of inactive tabs
-    "tab.unfocusedActiveForeground": "#FFFFFF", // Color for the text of the active tab when unfocused
-    "tab.unfocusedInactiveForeground": "#AAAAAA", // Color for the text of inactive tabs when unfocused
-
+    "tab.activeForeground": "#FFFFFF",
+    "tab.inactiveForeground": "#AAAAAA",
+    "tab.unfocusedActiveForeground": "#FFFFFF",
+    "tab.unfocusedInactiveForeground": "#AAAAAA",
     "editorCursor.foreground": "#FFFFFFAA",
     "editorLineNumber.foreground": "#FFFFFF55",
     "editorLineNumber.activeForeground": "#FFFFFFEE",
     "editorIndentGuide.activeBackground1": "#FFFFFF66",
-    "editorIndentGuide.background1": "#FFFFFF22"
+    "editorIndentGuide.background1": "#FFFFFF22",
+    // "statusBar.background": "#005f5f",
+    // "statusBar.noFolderBackground": "#005f5f",
+    // "statusBar.debuggingBackground": "#005f5f",
+    // "statusBar.debuggingForeground": "#ffffff"
   },
+  "vim.enableNeovim": true,
+  "vim.startofline": false,
+  "vim.smartRelativeLine": true,
 }
 // K / gh      -> Hover Eqv.
 // Leader + st -> Show Themes
