@@ -7,7 +7,7 @@
   // "workbench.iconTheme": "moxer-icons",
 
   // Change font
-  // "editor.fontFamily": "Geist Mono",
+  "editor.fontFamily": "Meslo LGL",
   // "scm.inputFontFamily": "Geist Mono",
   // "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   // "chat.editor.fontFamily": "Geist Mono",
