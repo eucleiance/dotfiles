@@ -2,7 +2,7 @@
   // open json editor for settings
   // "workbench.settings.editor": "json",
   // Theme
-  "workbench.colorTheme": "Bearded Theme Monokai Reversed",
+  "workbench.colorTheme": "Bearded Theme Surprising Watermelon",
   // "workbench.iconTheme": "moxer-icons",
   // Change font
   // "editor.fontFamily": "Meslo LGL",
@@ -1102,9 +1102,65 @@
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
-        "scope": "punctuation.terminator.statement",
+      "scope": [    // All Punctuations & other things
+        "punctuation",
+        "attribute_value",
+        "meta.brace",
+        "punctuation.definition.parameters",
+        "punctuation.definition.template-expression",
+        "keyword.operator",
+        "keyword.other",
+        "punctuation.terminator",
+        "punctuation.separator",
+        "punctuation.definition.generic.begin",
+        "punctuation.definition.generic.end",
+        "meta.function.type-declaration",
+        "keyword.other.colon.elm",
+        "meta.record.field.elm keyword.other.elm",
+        "keyword.other.period.elm",
+        "meta.tag.xml",
+        "meta.tag.preprocessor.xml",
+        "punctuation.definition.block",
+        "punctuation.accessor",
+        "constant.name.attribute.tag.pug",
+        "string.interpolated.pug",
+        "keyword.other.whitespace.liquid",
+        "meta.tag.template.block.twig",
+        "meta.tag.template.value.twig",
+        "begin.bracket",
+        "end.bracket",
+        "text.html.twig meta.tag.inline.any",
+        "text.html.twig meta.tag.block.any",
+        "support.function.construct.begin.blade",
+        "support.function.construct.end.blade source.php",
+        "support.function.construct.end.blade",
+        "meta.function.echo.blade source.php",
+        "punctuation.definition.list.begin.python",
+        "punctuation.definition.list.end.python",
+        "text.html.vue-html meta.tag.block.any",
+        "keyword.operator.assignment.tsx",
+        "meta.definition.method.signature.java",
+        "meta.class.body.groovy",
+        "meta.definition.method.groovy meta.method.body.java meta.declaration.assertion.groovy",
+        "punctuation.definition.list.begin.erlang",
+        "meta.expression.parenthesized",
+        "meta.definition.function.swift meta.parameter-clause.swift",
+        "source.swift meta.function-call.swift",
+        "punctuation.section.embedded.end.swift source.swift",
+        "source.lua",
+        "meta.function.lua",
+        "punctuation.definition.keyword.svelte",
+        "source.svelte meta.scope.tag.SpeakerPicture.svelte meta.tag.start.svelte entity.other.attribute-name.svelte",
+        "expression.embbeded.vue punctuation.definition.tag.begin.html.vue",
+        "expression.embbeded.vue punctuation.definition.tag.end.html.vue",
+        "source.graphql\tmeta.type.interface.graphql meta.type.object.graphql meta.type.list.graphql meta.brace.square.graphql",
+        "punctuation.output.liquid",
+        "text.html.liquid meta.tag.liquid punctuation.definition.tag.end.liquid",
+        "JSXAttrs keyword.operator.assignment.jsx",
+        "meta.tag.attributes.js keyword.operator.assignment.js"
+      ],
         "settings": {
-          "foreground": "#FFFFFFCC"
+          "foreground": "#FFFFFFFF"
         }
       },
       {
@@ -1132,7 +1188,7 @@
         }
       },
       {
-      "scope": [
+      "scope": [  // Texts like HTML innertext
         "meta.section.struct.go variable.other.field.go",
         "meta.section.struct.go variable.other.declaration.go",
         "source",
@@ -1147,7 +1203,7 @@
         "JSXNested"
       ],
       "settings": {
-        "foreground": "#FFFFFF"
+        "foreground": "#FFFFFFEE"
       }
       }
     ]
@@ -1166,7 +1222,7 @@
     "tree.indentGuidesStroke": "#AAAAAA",
     "statusBar.foreground": "#ffffff",
     "titleBar.activeForeground": "#AAAAAA",
-    "titleBar.inactiveForeground": "#FFFFFF",
+    "titleBar.inactiveForeground": "#AAAAAA",
     "tab.activeForeground": "#FFFFFF",
     "tab.inactiveForeground": "#AAAAAA",
     "tab.unfocusedActiveForeground": "#FFFFFF",
@@ -1176,11 +1232,33 @@
     "editorLineNumber.activeForeground": "#FFFFFFEE",
     "editorIndentGuide.activeBackground1": "#FFFFFF66",
     "editorIndentGuide.background1": "#FFFFFF22",
+    "editorGutter.addedBackground": "#00000000",
+    "editorGutter.modifiedBackground": "#00000000",
+    "editorGutter.deletedBackground": "#00000000",
+    "editor.lineHighlightBackground": "#222222DD",
+    "editor.lineHighlightBorder": "#222222DD",
+    "tab.activeBackground": "#05050577",
     // "foreground": "#ffffff",
     // "statusBar.background": "#005f5f",
     // "statusBar.noFolderBackground": "#005f5f",
     // "statuskBar.debuggingBackground": "#005f5f",
     // "statusBar.debuggingForeground": "#ffffff"
+    "activityBar.background": "#050505",
+    "sideBar.background": "#050505",
+    "sideBarSectionHeader.background": "#050505",
+    "statusBar.background": "#050505",
+    "titleBar.activeBackground": "#050505",
+    "titleBar.inactiveBackground": "#050505",
+    "editor.background": "#050505",
+    "editorGroupHeader.tabsBackground": "#050505",
+    "editorGutter.background": "#050505",
+    "tab.inactiveBackground": "#050505",
+    "tab.unfocusedInactiveBackground": "#050505",
+    "breadcrumb.background": "#050505",
+    "panel.background": "#050505",
+    "terminal.background": "#050505",
+
+
   },
   "workbench.activityBar.location": "bottom",
   "window.customTitleBarVisibility": "auto",
