@@ -98,8 +98,6 @@
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   },
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": true,
   "window.zoomLevel": 0,
 
   // Neovim
@@ -1090,7 +1088,6 @@
       "command": "workbench.action.toggleZenMode"
     }
   ],
-  "editor.cursorBlinking": "phase",
   "editor.stickyScroll.enabled": false,
   "editor.lineNumbers": "relative",
   "editor.tabSize": 2,
@@ -1230,13 +1227,29 @@
     "editorCursor.foreground": "#FFFFFFAA",
     "editorLineNumber.foreground": "#FFFFFF55",
     "editorLineNumber.activeForeground": "#FFFFFFEE",
-    "editorIndentGuide.activeBackground1": "#FFFFFF66",
-    "editorIndentGuide.background1": "#FFFFFF22",
+
+    "editorIndentGuide.activeBackground1": "#FFFFFF77",
+
+    // "editorBracketHighlight.foreground1": "#ff4141",
+    // "editorBracketHighlight.foreground2": "#00ff73",
+    // "editorBracketHighlight.foreground3": "#0059ff99",
+    // "editorBracketHighlight.foreground4": "#6f00ff",
+    // "editorBracketHighlight.foreground5": "#ff006a99",
+    // "editorBracketHighlight.foreground6": "#FFFFFF99",
+    // "editorBracketHighlight.unexpectedBracket.foreground": "#FFFFFF99",
+
     "editorGutter.addedBackground": "#00000000",
     "editorGutter.modifiedBackground": "#00000000",
     "editorGutter.deletedBackground": "#00000000",
     "editor.lineHighlightBackground": "#222222DD",
     "editor.lineHighlightBorder": "#222222DD",
+    "editor.wordHighlightBackground": "#FFFFFF11",
+    "editor.wordHighlightBorder": "#FFFFFF55",
+    "editorBracketMatch.border": "#FFFFFF55",
+    "editorBracketMatch.background": "#FFFFFF11",
+    "editor.wordHighlightStrongBackground": "#cecece22",
+    "editorHoverWidget.background": "#131313",
+    "editorHoverWidget.border": "#3a3a3a",
     "tab.activeBackground": "#05050577",
     // "foreground": "#ffffff",
     // "statusBar.background": "#005f5f",
@@ -1258,10 +1271,12 @@
     "panel.background": "#050505",
     "terminal.background": "#050505",
 
-
   },
   "workbench.activityBar.location": "bottom",
   "window.customTitleBarVisibility": "auto",
   "workbench.editor.editorActionsLocation": "titleBar",
   "editor.minimap.enabled": false,
+  "editor.guides.bracketPairs":false,
+  "editor.guides.bracketPairsHorizontal": false,
+  "editor.cursorBlinking": "smooth",
 }
