@@ -1279,4 +1279,11 @@
   "editor.guides.bracketPairs":false,
   "editor.guides.bracketPairsHorizontal": false,
   "editor.cursorBlinking": "smooth",
+  "window.menuBarVisibility": "compact",
+  "keyboard.dispatch": "keyCode",
+  "vscode-neovim.compositeKeys": {
+    "jk": {
+      "command": "vscode-neovim.escape",
+    },
+  },
 }

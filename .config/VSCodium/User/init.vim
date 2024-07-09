@@ -82,8 +82,6 @@ nmap gcc <Plug>VSCodeCommentaryLine
 nmap <Tab> :Tabnext<CR>
 nmap <S-Tab> :Tabprev<CR>
 
-inoremap jk <Esc>
-
 set clipboard=unnamedplus
 
 function! s:formatSelectedLines()
