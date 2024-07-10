@@ -231,4 +231,9 @@
     "command": "-workbench.action.closeActiveEditor",
     "when": "!editorTextFocus && !filesExplorerFocus && !searchViewletFocus && !terminalFocus && neovim.mode != 'cmdline'"
   },
+  {
+    "key": "ctrl+h",
+    "command": "-editor.action.startFindReplaceAction",
+    "when": "editorFocus || editorIsOpen"
+  },
 ]

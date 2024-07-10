@@ -1,8 +1,8 @@
-{ config, pkgs-stable, pkgs-unstable, ... }:
+{ config, pkgs-stable, pkgs-code, pkgs-unstable, ... }:
 {
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages =
-    (with pkgs-stable; [
+    (with pkgs-code; [
       # List of stable packages (if any)
       #vimPlugins.coc-tailwindcss
       vscodium-fhs

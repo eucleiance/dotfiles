@@ -2,11 +2,12 @@
   description = "My first flake!";
 
   inputs = {
+    nixpkgs-code.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, nixpkgs-code, home-manager, ... }:
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
@@ -14,6 +15,7 @@
       # pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
       commonArgs = { inherit system; config.allowUnfree = true; };
       pkgs-stable = import nixpkgs commonArgs;
+      pkgs-code = import nixpkgs-code commonArgs;
       pkgs-unstable = import nixpkgs-unstable commonArgs;
       username = "coldbrewrosh";
       name = "Rosh";
@@ -33,6 +35,7 @@
             inherit name;
             inherit pkgs-stable;
             inherit pkgs-unstable;
+            inherit pkgs-code;
           };
         };
       };

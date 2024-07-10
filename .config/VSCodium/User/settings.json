@@ -1,20 +1,4 @@
 {
-  // open json editor for settings
-  // "workbench.settings.editor": "json",
-  // Theme
-  "workbench.colorTheme": "Bearded Theme Surprising Watermelon",
-  // "workbench.iconTheme": "moxer-icons",
-  // Change font
-  // "editor.fontFamily": "Meslo LGL",
-  // "scm.inputFontFamily": "Geist Mono",
-  // "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-  // "chat.editor.fontFamily": "Geist Mono",
-  // "debug.console.fontFamily": "Geist Mono",
-  // "editor.codeLensFontFamily": "Geist Mono",
-  // "notebook.output.fontFamily": "Geist Mono",
-  // "markdown.preview.fontFamily": "Geist Mono",
-  // "editor.inlayHints.fontFamily": "Geist Mono",
-  // Font size
   "editor.fontSize": 14,
   "terminal.integrated.fontSize": 14,
   // ui
@@ -1248,6 +1232,7 @@
     "editorBracketMatch.border": "#FFFFFF55",
     "editorBracketMatch.background": "#FFFFFF11",
     "editor.wordHighlightStrongBackground": "#cecece22",
+    "editor.wordHighlightTextBorder": "#FFFFFF55",
     "editorHoverWidget.background": "#131313",
     "editorHoverWidget.border": "#3a3a3a",
     "tab.activeBackground": "#05050577",
@@ -1256,20 +1241,20 @@
     // "statusBar.noFolderBackground": "#005f5f",
     // "statuskBar.debuggingBackground": "#005f5f",
     // "statusBar.debuggingForeground": "#ffffff"
-    "activityBar.background": "#050505",
-    "sideBar.background": "#050505",
-    "sideBarSectionHeader.background": "#050505",
-    "statusBar.background": "#050505",
-    "titleBar.activeBackground": "#050505",
-    "titleBar.inactiveBackground": "#050505",
-    "editor.background": "#050505",
-    "editorGroupHeader.tabsBackground": "#050505",
-    "editorGutter.background": "#050505",
-    "tab.inactiveBackground": "#050505",
-    "tab.unfocusedInactiveBackground": "#050505",
-    "breadcrumb.background": "#050505",
-    "panel.background": "#050505",
-    "terminal.background": "#050505",
+    "activityBar.background": "#0d0d0d",
+    "sideBar.background": "#0d0d0d",
+    "sideBarSectionHeader.background": "#0d0d0d",
+    "statusBar.background": "#0d0d0d",
+    "titleBar.activeBackground": "#0d0d0d",
+    "titleBar.inactiveBackground": "#0d0d0d",
+    "editor.background": "#0d0d0d",
+    "editorGroupHeader.tabsBackground": "#0d0d0d",
+    "editorGutter.background": "#0d0d0d",
+    "tab.inactiveBackground": "#0d0d0d",
+    "tab.unfocusedInactiveBackground": "#0d0d0d",
+    "breadcrumb.background": "#0d0d0d",
+    "panel.background": "#0d0d0d",
+    "terminal.background": "#0d0d0d",
 
   },
   "workbench.activityBar.location": "bottom",
@@ -1286,4 +1271,22 @@
       "command": "vscode-neovim.escape",
     },
   },
+  "editor.wordWrap": "on",
+  //exludes fies & folders in search indexing
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/env": true,
+    "**/venv": true
+  },
+  //exludes fies & folders for watcher service
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/env/**": true,
+    "**/venv/**": true,
+    "env-*": true
+  },
+  "workbench.colorTheme": "Bearded Theme Surprising Watermelon",
 }
