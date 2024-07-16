@@ -93,6 +93,7 @@
 
       export PNPM_HOME="$HOME/.pnpm"
       export PATH="$PNPM_HOME/bin:$PATH"
+      export PATH="/home/coldbrewrosh/.npm-packages/bin:$PATH"
 
       # source /root/.bashrc
 
@@ -133,6 +134,9 @@
 
     shellAliases = {
       ll = "ls -l";
+      del = "trash";
+      dell = "trash list";
+      res = "trash restore -r";
       update = "sudo nixos-rebuild switch";
     };
     history.size = 10000;

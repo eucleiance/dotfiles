@@ -10,6 +10,10 @@
       tree
       stow
 
+      gifsicle
+      gifski
+
+      trashy
     ])
     ++
     (with pkgs-unstable; [
