@@ -8,12 +8,19 @@
       bat
       ripgrep
       tree
+      # Sym Links
       stow
 
+      # For Gifs -> Gifski is better
       gifsicle
       gifski
 
+      # Move to Trash
       trashy
+
+      # System Monitoring
+      # npm -> vtop
+      gotop
     ])
     ++
     (with pkgs-unstable; [

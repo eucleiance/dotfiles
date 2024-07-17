@@ -1,5 +1,5 @@
 {
-  description = "My first flake!";
+  description = "@coldbrewrosh @eucleiance Flake";
 
   inputs = {
     nixpkgs-code.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -28,6 +28,7 @@
             ./modules/unstable.nix
             ./modules/cli.nix
             ./modules/vim.nix
+            ./modules/gui.nix
             # Remember to (git add .) after adding new modules
           ];
           specialArgs = {

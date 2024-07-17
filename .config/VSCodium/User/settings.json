@@ -1082,7 +1082,7 @@
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
-        "scope": [ // All Punctuations & other things
+        "scope": [
           "punctuation",
           "attribute_value",
           "meta.brace",
@@ -1144,15 +1144,9 @@
         }
       },
       {
-        "scope": "punctuation.separator",
-        "settings": {
-          "foreground": "#FFFFFFCC"
-        }
-      },
-      {
         "scope": "comment",
         "settings": {
-          "foreground": "#FFFFFF66" // Comment Test
+          "foreground": "#FFFFFF66"
         }
       },
       {
@@ -1168,7 +1162,7 @@
         }
       },
       {
-        "scope": [ // Texts like HTML innertext
+        "scope": [
           "meta.section.struct.go variable.other.field.go",
           "meta.section.struct.go variable.other.declaration.go",
           "source",
@@ -1184,7 +1178,7 @@
         ],
         "settings": {
           "foreground": "#FFFFFFEE"
-        },
+        }
       }
     ]
   },
@@ -1235,21 +1229,6 @@
     "notificationToast.border": "#000000",
     "notifications.border": "#000000",
     "list.focusOutline": "#000000",
-    "activityBar.background": "#0A0A0F",
-    "sideBar.background": "#0A0A0F",
-    "sideBarSectionHeader.background": "#0A0A0F",
-    "statusBar.background": "#0A0A0F",
-    "titleBar.activeBackground": "#0A0A0F",
-    "titleBar.inactiveBackground": "#0A0A0F",
-    "editor.background": "#0A0A0F",
-    "editorGroupHeader.tabsBackground": "#0A0A0F",
-    "editorGutter.background": "#0A0A0F",
-    "tab.inactiveBackground": "#0A0A0F",
-    "tab.unfocusedInactiveBackground": "#0A0A0F",
-    "breadcrumb.background": "#0A0A0F",
-    "panel.background": "#0A0A0F",
-    "terminal.background": "#0A0A0F",
-    "minimap.background": "#0A0A0F",
     "activityBar.activeBackground": "#121218",
     "list.activeSelectionBackground": "#121218",
     "notifications.background": "#121218",
@@ -1264,6 +1243,13 @@
     "editorHoverWidget.background": "#121218",
     "quickInput.background": "#121218",
     "quickInputTitle.background": "#121218",
+    "activityBar.inactiveForeground": "#77779F",
+    "sideBar.foreground": "#77779F",
+    "titleBar.activeForeground": "#77779F",
+    "titleBar.inactiveForeground": "#77779F",
+    "tab.inactiveForeground": "#77779F",
+    "tab.unfocusedInactiveForeground": "#77779F",
+    "menu.foreground": "#77779F",
     "list.hoverForeground": "#FFFFFF",
     "list.focusForeground": "#FFFFFF",
     "activityBar.foreground": "#FFFFFF",
@@ -1274,13 +1260,21 @@
     "statusBar.foreground": "#FFFFFF",
     "tab.activeForeground": "#FFFFFF",
     "tab.unfocusedActiveForeground": "#FFFFFF",
-    "activityBar.inactiveForeground": "#77779F",
-    "sideBar.foreground": "#77779F",
-    "titleBar.activeForeground": "#77779F",
-    "titleBar.inactiveForeground": "#77779F",
-    "tab.inactiveForeground": "#77779F",
-    "tab.unfocusedInactiveForeground": "#77779F",
-    "menu.foreground": "#77779F"
+    "activityBar.background": "#0A0A0F",
+    "sideBar.background": "#0A0A0F",
+    "sideBarSectionHeader.background": "#0A0A0F",
+    "statusBar.background": "#0A0A0F",
+    "titleBar.activeBackground": "#0A0A0F",
+    "titleBar.inactiveBackground": "#0A0A0F",
+    "editor.background": "#0A0A0F",
+    "editorGroupHeader.tabsBackground": "#0A0A0F",
+    "editorGutter.background": "#0A0A0F",
+    "tab.inactiveBackground": "#0A0A0F",
+    "tab.unfocusedInactiveBackground": "#0A0A0F",
+    "breadcrumb.background": "#0A0A0F",
+    "panel.background": "#0A0A0F",
+    "terminal.background": "#0A0A0F",
+    "minimap.background": "#0A0A0F"
   },
   "window.customTitleBarVisibility": "auto",
   "workbench.editor.editorActionsLocation": "titleBar",
@@ -1318,8 +1312,10 @@
   "SecondaryForeground.HexCode": "#77779F",
   "Borders.HexCode": "#000000",
   "Borders.Enable": true,
-  "PrimaryBackground.Enable": true,
   "SecondaryBackground.Enable": true,
-  "PrimaryForeground.Enable": true,
   "SecondaryForeground.Enable": true,
+  "Punctuation.HexCode": "#222222",
+  "PrimaryForeground.Enable": true,
+  "PrimaryBackground.Enable": true,
+  "Punctuation.Enable": true,
 }
