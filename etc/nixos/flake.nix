@@ -29,6 +29,7 @@
             ./modules/cli.nix
             ./modules/vim.nix
             ./modules/gui.nix
+            ./modules/libs.nix
             # Remember to (git add .) after adding new modules
           ];
           specialArgs = {

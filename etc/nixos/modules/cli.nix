@@ -21,6 +21,9 @@
       # System Monitoring
       # npm -> vtop
       gotop
+
+      # Screenshot
+      hyprshot
     ])
     ++
     (with pkgs-unstable; [
