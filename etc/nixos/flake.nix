@@ -30,6 +30,8 @@
             ./modules/vim.nix
             ./modules/gui.nix
             ./modules/libs.nix
+            ./modules/xorg.nix
+            ./modules/audio.nix
             # Remember to (git add .) after adding new modules
           ];
           specialArgs = {

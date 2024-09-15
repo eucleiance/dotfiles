@@ -89,6 +89,7 @@
       bindkey '^j' down-history
 
       export PATH=$PATH:/home/coldbrewrosh/.config/scripts
+      export PATH=$PATH:/home/coldbrewrosh/.config/scripts/sys
       export PATH=$PATH:/run/current-system/sw/bin/clangd
 
       export PNPM_HOME="$HOME/.pnpm"
@@ -207,8 +208,12 @@
 
   programs.vscode = {
     enable = true;
-
   };
+
+  # programs.rofi = {
+  #   enable = true;
+  #   theme = "${config.xdg.configHome}/rofi/themes/rounded-gray.rasi";
+  # };
 
   #  programs.eww = {
   #    enable = true;

@@ -7,6 +7,10 @@
       qbittorrent
       # Discord w/ Screenshare w/ Audio
       vesktop
+      # File Manager
+      xfce.thunar
+      # Ebook Reader
+      foliate
     ])
     ++
     (with pkgs-unstable; [

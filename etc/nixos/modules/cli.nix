@@ -24,6 +24,20 @@
 
       # Screenshot
       hyprshot
+
+      # Git
+      gitleaks
+
+      # calculator util for shell scripts
+      bc
+
+      # Queries a selection from the user and prints to stdout
+      slop
+
+      ffcast
+
+      libnotify
+
     ])
     ++
     (with pkgs-unstable; [

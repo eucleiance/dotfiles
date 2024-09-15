@@ -1,0 +1,26 @@
+#!/home/coldbrewrosh/.nix-profile/bin/zsh
+
+# Get the id of the touchpad
+id=$(xinput list | grep -i "Touchpad" | awk '{print $6}' | cut -d'=' -f2)
+if [ -z "$id" ]; then
+  echo "Failed to find touchpad ID"
+  exit 1
+fi
+echo "Touchpad ID: $id"
+
+# Get the id of the field corresponding to natural scrolling
+natural_scrolling_id=$(xinput list-props "$id" | grep -i "Natural Scrolling Enabled (" | awk -F'[()]' '{print $2}')
+if [ -z "$natural_scrolling_id" ]; then
+  echo "Failed to find natural scrolling ID"
+  exit 1
+fi
+echo "Natural Scrolling ID: $natural_scrolling_id"
+
+# Set the property to true
+xinput --set-prop "$id" "$natural_scrolling_id" 1
+if [ $? -ne 0 ]; then
+  echo "Failed to set natural scrolling"
+  exit 1
+fi
+
+echo "Natural scrolling enabled"

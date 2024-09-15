@@ -4,7 +4,7 @@
   environment.systemPackages =
     (with pkgs-stable; [
       pkg-config
-      libdbus
+      #libdbus
     ])
     ++
     (with pkgs-unstable; [

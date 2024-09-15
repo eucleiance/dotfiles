@@ -1,0 +1,12 @@
+#!/home/coldbrewrosh/.nix-profile/bin/zsh
+
+# Start applications on specified workspaces
+i3-msg "workspace 2; exec kitty"
+sleep 1
+i3-msg "workspace 3; exec firefox"
+sleep 3
+i3-msg "workspace 10; exec kitty"
+sleep 1
+
+# Switch back to workspace 1
+i3-msg "workspace 1"

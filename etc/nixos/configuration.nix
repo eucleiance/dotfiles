@@ -124,7 +124,7 @@
     wlr.enable = true;
     extraPortals = with pkgs; [
       #xdg-desktop-portal-gnome # More Portal backends for apps like chrome ?
-      xdg-desktop-portal-gtk
+      # xdg-desktop-portal-gtk
       xdg-desktop-portal-hyprland
     ];
   };
@@ -148,14 +148,22 @@
       enable = true;
       desktopManager = {
         plasma5.enable = true;
-        #gnome.enable = true;
+        gnome.enable = true;
       };
+      windowManager.i3 =
+        {
+          enable = true;
+          extraPackages = with pkgs; [
+          ];
+        };
       videoDrivers = [
         "intel"
         "nvidia"
       ];
     };
   };
+
+  programs.ssh.askPassword = pkgs.lib.mkForce "${pkgs.ksshaskpass.out}/bin/ksshaskpass";
 
   # ------------------------------------------------
 
@@ -317,28 +325,6 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # Enable sound with pipewire.
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    #wireplumber.enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    extraConfig.pipewire."92-low-latency" = {
-      context.properties = {
-        default.clock.rate = 192000;
-        default.clock.quantum = 32;
-        default.clock.min-quantum = 32;
-        default.clock.max-quantum = 32;
-      };
-    };
-  };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-
   services.xserver = {
     xkb = {
       variant = "";
@@ -346,6 +332,13 @@
     };
   };
   services.libinput.enable = true;
+
+  services.logind.extraConfig = ''
+    # don’t shutdown when power button is short-pressed
+    HandlePowerKey=ignore
+    # Keep the laptop on when lid is closed
+    LidSwitchIgnoreInhibited=no
+  '';
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.coldbrewrosh = {
@@ -378,6 +371,11 @@
   };
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-29.4.6"
+  ];
+
   environment.systemPackages = with pkgs; [
 
     # --- Pre-reqs ---
@@ -388,7 +386,7 @@
     gnumake
     cmake
     cargo
-    electron_29
+    # electron_29
     clang-tools_12
     llvmPackages_12.clang-unwrapped
     nodePackages.pyright
@@ -463,6 +461,7 @@
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
     wayland
+    xwayland
     cliphist # Wayland Clipboard Manager
 
     # --- Hyprland reqs --- #
@@ -538,14 +537,6 @@
 
   ];
 
-
-
-  #  programs.eww = {
-  #    enable = true;
-  #    #package = pkgs.eww-wayland;
-  #  };
-
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -564,20 +555,6 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-
-
-
-
-  #  home-manager.users.coldbrewrosh = { pkgs, ... }:{
-  #    home.packages = with pkgs; [
-  #      btop
-
-  #    ];
-  #  };
-
-
-
-
 
 
 

@@ -1,0 +1,10 @@
+#!/home/coldbrewrosh/.nix-profile/bin/zsh
+
+# Toggle between US QWERTY and DE QWERTZ layouts
+current_layout=$(setxkbmap -query | grep layout | awk '{print $2}')
+
+if [ "$current_layout" = "us" ]; then
+    setxkbmap -layout de -variant qwerty -option 'grp:ctrl_shift_toggle'
+else
+    setxkbmap -layout us -option 'grp:ctrl_shift_toggle'
+fi

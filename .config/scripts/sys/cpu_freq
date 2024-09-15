@@ -1,0 +1,3 @@
+#!/home/coldbrewrosh/.nix-profile/bin/zsh
+
+awk -F': ' '/cpu MHz/ {printf "CPU: %.2f GHz\n", $2 / 1000}' /proc/cpuinfo | head -n 1
