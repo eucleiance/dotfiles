@@ -34,7 +34,7 @@
             ./modules/audio.nix
             ./modules/rdp.nix
             ./modules/data_sci/data_sci.nix
-            ./modules/data_sci/jupyter_lab_vim.nix
+            # ./modules/data_sci/jupyter_lab_vim.nix
             # Remember to (git add .) after adding new modules
           ];
           specialArgs = {

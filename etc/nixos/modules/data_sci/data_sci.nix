@@ -1,16 +1,19 @@
-{ config, pkgs-stable, pkgs-unstable, ... }:
+{ config, pkgs-stable, pkgs-unstable, lib, ... }:
 
-let
-  # Import the package from your custom Nix expression
-  jupyterLabVim = pkgs-stable.callPackage ./modules/data_sci/jupyter_lab_vim.nix { };
-in
 {
   nixpkgs.config.allowUnfree = true;
 
-  # Define system packages
   environment.systemPackages = with pkgs-stable; [
-    jupyterLabVim
-    (python311.withPackages (ps: with ps; [
+    # Import jupyter_lab_vim from jupyter_lab_vim.nix
+    (pkgs-stable.callPackage ./jupyter_lab_vim.nix {
+      lib = pkgs-stable.lib;
+      buildPythonPackage = pkgs-stable.python311Packages.buildPythonPackage; # Updated here
+      fetchPypi = pkgs-stable.python311Packages.fetchPypi; # Updated here
+      jupyterlab = pkgs-stable.python311Packages.jupyterlab; # Updated here
+    })
+
+    # Python 3.11 packages with system-wide installation
+    (pkgs-stable.python311.withPackages (ps: with ps; [
       pip
       numpy
       scipy
@@ -19,10 +22,10 @@ in
       statsmodels
       scikitlearn
       matplotlib
-      notebook   # Jupyter Notebook
+      notebook # Jupyter Notebook
       ipywidgets
     ]))
   ] ++ (with pkgs-unstable; [
-    # Add packages from pkgs-unstable here
+    # Add any additional packages from pkgs-unstable here
   ]);
 }
