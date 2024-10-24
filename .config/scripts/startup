@@ -5,6 +5,8 @@ i3-msg "workspace 2; exec kitty"
 sleep 1
 i3-msg "workspace 3; exec firefox"
 sleep 3
+# i3-msg "workspace 9; exec thunderbird"
+# sleep 4
 i3-msg "workspace 10; exec kitty"
 sleep 1
 

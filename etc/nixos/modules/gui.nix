@@ -11,6 +11,18 @@
       xfce.thunar
       # Ebook Reader
       foliate
+      # Interior Design
+      # sweethome3d.application
+      # Email Client
+      thunderbird
+      # Office
+      onlyoffice-bin
+      # Lightroom
+      darktable
+      # Digital Art
+      krita
+      # Maps 
+      qgis
     ])
     ++
     (with pkgs-unstable; [

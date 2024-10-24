@@ -1,3 +1,4 @@
+{ config, pkgs-stable, pkgs-unstable, ... }:
 {
   # Enable sound with pipewire.
   sound.enable = true;
@@ -17,4 +18,19 @@
       };
     };
   };
+
+
+
+  nixpkgs.config.allowUnfree = true;
+  environment.systemPackages =
+    (with pkgs-stable; [
+      # Equalizer
+      easyeffects
+      # Subsonic Server
+      navidrome
+    ])
+    ++
+    (with pkgs-unstable; [
+
+    ]);
 }

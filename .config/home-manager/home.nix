@@ -20,6 +20,13 @@
   #};
 
 
+  home.pointerCursor = {
+    # name = "capitaine-cursors";
+    # package = pkgs.capitaine-cursors;
+    size = 40;
+  };
+
+
   nix = {
     package = pkgs.nix;
     settings.experimental-features = [ "nix-command" "flakes" ];

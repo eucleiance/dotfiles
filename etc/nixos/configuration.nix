@@ -146,6 +146,7 @@
     };
     xserver = {
       enable = true;
+      # upscaleDefaultCursor = true;
       desktopManager = {
         plasma5.enable = true;
         gnome.enable = true;
@@ -156,6 +157,14 @@
           extraPackages = with pkgs; [
           ];
         };
+
+      windowManager.awesome = {
+        enable = true;
+        luaModules = with pkgs.luaPackages; [
+          luarocks # is the package manager for Lua modules
+          luadbi-mysql # Database abstraction layer
+        ];
+      };
       videoDrivers = [
         "intel"
         "nvidia"
