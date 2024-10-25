@@ -41,6 +41,5 @@
     ])
     ++
     (with pkgs-unstable; [
-
     ]);
 }

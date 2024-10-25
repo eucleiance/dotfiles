@@ -5,6 +5,8 @@
     (with pkgs-stable; [
       pkg-config
       #libdbus
+      gcc
+      libcxx
     ])
     ++
     (with pkgs-unstable; [

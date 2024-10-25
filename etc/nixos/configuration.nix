@@ -138,6 +138,11 @@
     # enableNvidiaPatches = true;
     xwayland.enable = true;
   };
+
+
+
+  # services.jupyter.enable = true;
+
   services = {
     displayManager = {
       sddm.enable = true;
@@ -389,7 +394,6 @@
 
     # --- Pre-reqs ---
     git
-    gcc
     unzip
     unzipNLS
     gnumake
@@ -420,7 +424,6 @@
 
     # --- Dev Tools ---
     vim
-    neovim
     helix
     #vscode
     #vscode-fhs
