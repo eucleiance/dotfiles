@@ -1,0 +1,7 @@
+#!/home/coldbrewrosh/.nix-profile/bin/zsh
+
+# Find all .mp4, .mov, and .mkv files recursively and calculate total runtime
+find . \( -type f -name "*.mp4" -o -name "*.mov" -o -name "*.mkv" \) -print0 | \
+while IFS= read -r -d '' file; do
+    ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$file"
+done | awk '{s+=$1} END {printf "Total runtime: %02d:%02d:%02d\n", s/3600, (s%3600)/60, s%60}'

@@ -28,6 +28,8 @@
       easyeffects
       # Subsonic Server
       navidrome
+      # For Muting Shortcut
+      pulseaudioFull
     ])
     ++
     (with pkgs-unstable; [
