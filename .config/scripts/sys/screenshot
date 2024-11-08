@@ -38,7 +38,7 @@ countdown() {
 
 # capture region to clipboard
 crtc() {
-	notify-send "Screenshot" "Select a region to capture"
+	notify-send -t 1000 "Screenshot" "Select a region to capture"
 	ffcast -q "$(slop -n -f '-g %g ')" png /tmp/screenshot_clip.png
 	xclip -selection clipboard -t image/png /tmp/screenshot_clip.png
 	rm /tmp/screenshot_clip.png
@@ -47,11 +47,11 @@ crtc() {
 
 # capture region to file and clipboard
 crtf() {
-	notify-send "Screenshot" "Select a region to capture"
+	notify-send -t 1000 "Screenshot" "Select a region to capture"
   dt=$(date '+%d-%m-%Y_%H-%M-%S')
 	ffcast -q "$(slop -n -f '-g %g ')" png "$screenshot_directory/$dt.png"
 	xclip -selection clipboard -t image/png "$screenshot_directory/$dt.png"
-	notify-send "Screenshot" "Region saved to $screenshot_directory"
+	notify-send -t 1000 "Screenshot" "Region saved to $screenshot_directory"
 }
 
 # capture screenshot to clipboard
@@ -67,7 +67,7 @@ cstf() {
 	dt=$(date '+%d-%m-%Y %H:%M:%S')
 	ffcast -q png "$screenshot_directory/$dt.png"
 	xclip -selection clipboard -t image/png "$screenshot_directory/$dt.png"
-	notify-send "Screenshot" "Screenshot saved to $screenshot_directory"
+	notify-send -t 1000 "Screenshot" "Screenshot saved to $screenshot_directory"
 }
 
 # record region (GIF)

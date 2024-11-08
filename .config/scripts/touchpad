@@ -1,5 +1,5 @@
 #!/home/coldbrewrosh/.nix-profile/bin/zsh
-DEVICE_ID=13
+DEVICE_ID=14
 STATE=$(xinput list-props "$DEVICE_ID" | grep "Device Enabled" | awk '{print $4}')
 
 if [ "$STATE" -eq 1 ]; then
