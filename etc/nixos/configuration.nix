@@ -143,7 +143,10 @@
 
   # services.jupyter.enable = true;
 
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
   services = {
+    blueman.enable = true;
     displayManager = {
       sddm.enable = true;
       sddm.wayland.enable = true;
@@ -284,7 +287,7 @@
         CPU_ENERGY_PERF_POLICY_ON_BAT = "performance";
 
         CPU_MIN_PERF_ON_AC = 0;
-        CPU_MAX_PERF_ON_AC = 80;
+        CPU_MAX_PERF_ON_AC = 100;
         CPU_MIN_PERF_ON_BAT = 0;
         CPU_MAX_PERF_ON_BAT = 50;
 
@@ -293,7 +296,7 @@
 
         # sudo tlp-stats -p
         CPU_SCALING_MIN_FREQ_ON_AC = 0;
-        CPU_SCALING_MAX_FREQ_ON_AC = 1800000;
+        CPU_SCALING_MAX_FREQ_ON_AC = 1900000;
         CPU_SCALING_MIN_FREQ_ON_BAT = 0;
         CPU_SCALING_MAX_FREQ_ON_BAT = 1500000;
 
@@ -301,10 +304,10 @@
         INTEL_GPU_MIN_FREQ_ON_AC = 0;
         INTEL_GPU_MIN_FREQ_ON_BAT = 0;
 
-        INTEL_GPU_MAX_FREQ_ON_AC = 500;
+        INTEL_GPU_MAX_FREQ_ON_AC = 800;
         INTEL_GPU_MAX_FREQ_ON_BAT = 500;
 
-        INTEL_GPU_BOOST_FREQ_ON_AC = 500;
+        INTEL_GPU_BOOST_FREQ_ON_AC = 800;
         INTEL_GPU_BOOST_FREQ_ON_BAT = 500;
 
         USB_AUTOSUSPEND = 0;

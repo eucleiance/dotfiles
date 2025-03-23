@@ -23,6 +23,14 @@
       krita
       # Maps 
       qgis
+      # video players
+      mpv
+      # Free Live IPTV
+      hypnotix
+      # PDF actions
+      stirling-pdf
+      # Sound Recorder
+      gnome.gnome-sound-recorder
     ])
     ++
     (with pkgs-unstable; [

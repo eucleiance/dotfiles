@@ -38,6 +38,10 @@
 
       libnotify
 
+      # rar 
+      rar
+
+
     ])
     ++
     (with pkgs-unstable; [

@@ -23,6 +23,8 @@
       matplotlib
       notebook # Jupyter Notebook
       ipywidgets
+      openpyxl
+      sqlalchemy
     ]))
   ] ++ (with pkgs-unstable; [
     # Add any additional packages from pkgs-unstable here
