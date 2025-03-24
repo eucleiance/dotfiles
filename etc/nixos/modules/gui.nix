@@ -30,7 +30,7 @@
       # PDF actions
       stirling-pdf
       # Sound Recorder
-      gnome.gnome-sound-recorder
+      gnome-sound-recorder
     ])
     ++
     (with pkgs-unstable; [

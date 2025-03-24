@@ -7,6 +7,9 @@
       #libdbus
       gcc
       libcxx
+
+      xorg.libxcb
+      xorg.libX11
     ])
     ++
     (with pkgs-unstable; [

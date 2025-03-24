@@ -174,9 +174,13 @@
         ];
       };
       videoDrivers = [
-        "intel"
-        "nvidia"
+        "modesetting"
+        # "nvidia"
       ];
+      # deviceSection = ''
+      #   DRI
+      #   crocus
+      # '';
     };
   };
 
@@ -186,12 +190,17 @@
 
   # --- Start Accelerated Video Playback Config --------------------------------------------------------------------------------------
 
-  hardware.opengl = {
+
+
+  hardware.graphics = {
     enable = true;
     # Vulkan
-    driSupport = true;
-    driSupport32Bit = true;
+    # driSupport = true;
+    enable32Bit = true;
+    # driSupport32Bit = true;   // Previous 24.04 option
     extraPackages = with pkgs; [
+      # pkgs.mesa.drivers
+
       #vulkan-validation-layers
       intel-media-driver # LIBVA_DRIVER_NAME=iHD
       # For Broadwell (2014) & newer
@@ -226,7 +235,7 @@
     # Open drivers (NVreg_OpenRmEnableUnsupportedGpus=1)
     open = false;
     # nvidia-drm.modeset=1
-    modesetting.enable = false; # Messes up with x11 but helps with wayland screen tearing eg: sway
+    # modesetting.enable = false; # Messes up with x11 but helps with wayland screen tearing eg: sway
     # Allow headless mode
     nvidiaPersistenced = false;
     # NVreg_PreserveVideoMemoryAllocations=1
@@ -234,13 +243,13 @@
     powerManagement.finegrained = false;
     nvidiaSettings = true;
     prime = {
-      #offload = {
-      #  enable = true;
-      #  enableOffloadCmd = true;
-      #};
+      offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
       intelBusId = "PCI:0:2:0";
       nvidiaBusId = "PCI:1:0:0";
-      sync.enable = true;
+      sync.enable = false;
       #reverseSync.enable = true;
     };
   };
@@ -405,7 +414,7 @@
     # electron_29
     clang-tools_12
     llvmPackages_12.clang-unwrapped
-    nodePackages.pyright
+    # nodePackages.pyright
 
     # --- Normal Packages ---
     kitty
@@ -480,10 +489,10 @@
     cliphist # Wayland Clipboard Manager
 
     # --- Hyprland reqs --- #
-    gnome.gnome-keyring # Makes Password available to other apps
+    gnome-keyring # Makes Password available to other apps
     # Leave the default keyring blank on first startup ( FOR PERSONAL )
     # Enter a strong passcode for default keyring ( FOR WORK )
-    gnome.seahorse # Manages Encryption keys & passcodes
+    seahorse # Manages Encryption keys & passcodes
     polkit
     polkit_gnome # Authentication Agent
     #libsForQt5.polkit-kde-agent
