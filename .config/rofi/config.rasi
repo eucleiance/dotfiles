@@ -1,2 +1,4 @@
 
-@theme "/nix/store/sr361sc732k4bbrx1jlsn41rwyx034pw-rofi-1.7.5+wayland3/share/rofi/themes/Monokai.rasi"
+//@theme "/nix/store/sr361sc732k4bbrx1jlsn41rwyx034pw-rofi-1.7.5+wayland3/share/rofi/themes/Monokai.rasi"
+
+@theme "/nix/store/mcbwsc6hcd5g7fcqzklxwf5m7bn5bk6a-rofi-1.7.5+wayland3/share/rofi/themes/Monokai.rasi"

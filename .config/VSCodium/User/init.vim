@@ -66,6 +66,11 @@ xnoremap <silent> <S-h> :call VSCodeNotify('workbench.action.previousEditor')<CR
 nnoremap <silent> <S-l> :call VSCodeNotify('workbench.action.nextEditor')<CR>
 xnoremap <silent> <S-l> :call VSCodeNotify('workbench.action.nextEditor')<CR>
 
+
+cnoremap <expr> H getcmdtype() == '/' ? 'H' : '<C-b>'
+cnoremap <expr> L getcmdtype() == '/' ? 'L' : '<C-f>'
+
+
 nnoremap gr <Cmd>call VSCodeNotify('editor.action.goToReferences')<CR>
 
 " Bind C-/ to vscode commentary since calling from vscode produces double comments due to multiple cursors
@@ -74,8 +79,8 @@ nnoremap <expr> <C-/> <SID>vscodeCommentary() . '_'
 
 nnoremap <silent> <C-w>_ :<C-u>call VSCodeNotify('workbench.action.toggleEditorWidths')<CR>
 
-nnoremap <silent> <Space> :call VSCodeNotify('whichkey.show')<CR>
-xnoremap <silent> <Space> :<C-u>call <SID>openWhichKeyInVisualMode()<CR>
+" nnoremap <silent> <Space> :call VSCodeNotify('whichkey.show')<CR>
+" xnoremap <silent> <Space> :<C-u>call <SID>openWhichKeyInVisualMode()<CR>
 
 xnoremap <silent> <C-P> :<C-u>call <SID>openVSCodeCommandsInVisualMode()<CR>
 
@@ -110,3 +115,18 @@ xnoremap <silent> = :<C-u>call <SID>formatSelectedLines()<CR>
 set ignorecase
 " Make Searched Case-Sensitive if the search contains UpperCase Letter
 set smartcase
+
+
+
+-- Unmap <Space> in normal mode if it's conflicting elsewhere
+vim.keymap.del("n", "<Space>")
+
+-- Add this Lua-based keybinding for <Space> in normal mode
+vim.keymap.set("n", "<Space>", function()
+  vim.fn["VSCodeNotify"]("whichkey.show")
+end, { noremap = true, silent = true })
+
+-- Adjust the <Space> binding for visual mode
+vim.keymap.set("x", "<Space>", function()
+  vim.fn["VSCodeNotify"]("whichkey.show")
+end, { noremap = true, silent = true })

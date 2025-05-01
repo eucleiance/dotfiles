@@ -13,6 +13,9 @@
       matplotlib
       notebook # Jupyter Notebook
       ipywidgets
+      ipykernel
+      seaborn
+      pip
     ]))
   ] ++ (with pkgs-unstable; [
     # Add packages from pkgs-unstable here

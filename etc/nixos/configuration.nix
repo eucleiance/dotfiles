@@ -174,8 +174,8 @@
         ];
       };
       videoDrivers = [
-        "modesetting"
-        # "nvidia"
+        # "modesetting"
+        "nvidia"
       ];
       # deviceSection = ''
       #   DRI
@@ -229,6 +229,8 @@
   };
 
   # --- End Accelerated Video Playback Config --------------------------------------------------------
+
+  # hardware.nvidiaOptimus.disable = true;
 
   hardware.nvidia = {
     package = config.boot.kernelPackages.nvidiaPackages.stable;
@@ -370,7 +372,7 @@
   users.users.coldbrewrosh = {
     isNormalUser = true;
     description = "coldbrewrosh";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       firefox
     ];
@@ -401,6 +403,8 @@
   nixpkgs.config.permittedInsecurePackages = [
     "electron-29.4.6"
   ];
+
+  virtualisation.docker.enable = true;
 
   environment.systemPackages = with pkgs; [
 
@@ -575,7 +579,7 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 5173 5174 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;

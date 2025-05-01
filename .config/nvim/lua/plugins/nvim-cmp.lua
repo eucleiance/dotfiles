@@ -12,11 +12,34 @@
 
 
 -- When pressing tab it doesn't fallback to the original function but instead it prints the tab character
+-- return {
+--   "hrsh7th/nvim-cmp",
+--   ---@param opts cmp.ConfigSchema
+--   opts = function(_, opts)
+--     local cmp = require("cmp")
+--
+--     opts.mapping = vim.tbl_extend("force", opts.mapping, {
+--       ["<Tab>"] = cmp.mapping(function(fallback)
+--         vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, true, true), "n", true)
+--       end, { "i", "s" }),
+--       ["<S-Tab>"] = cmp.mapping(function(fallback)
+--         vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<S-Tab>", true, true, true), "n", true)
+--       end, { "i", "s" }),
+--     })
+--   end,
+-- }
+
+
+
+-- Trying to fix the above code
 return {
   "hrsh7th/nvim-cmp",
   ---@param opts cmp.ConfigSchema
   opts = function(_, opts)
     local cmp = require("cmp")
+
+    -- Ensure opts.mapping is initialized as a table if nil
+    opts.mapping = opts.mapping or {}
 
     opts.mapping = vim.tbl_extend("force", opts.mapping, {
       ["<Tab>"] = cmp.mapping(function(fallback)
@@ -24,7 +47,7 @@ return {
       end, { "i", "s" }),
       ["<S-Tab>"] = cmp.mapping(function(fallback)
         vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<S-Tab>", true, true, true), "n", true)
-      end, { "i", "s" }),
+      end, { "i", "s" }),   
     })
   end,
 }
