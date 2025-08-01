@@ -10,5 +10,10 @@
     (with pkgs-unstable; [
       obsidian
       zed-editor
+      windsurf
+      spotify
+      spotifywm
+      spotify-qt
+      # notion-app
     ]);
 }

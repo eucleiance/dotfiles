@@ -306,20 +306,20 @@
         CPU_BOOST_ON_BAT = 0;
 
         # sudo tlp-stats -p
-        CPU_SCALING_MIN_FREQ_ON_AC = 0;
-        CPU_SCALING_MAX_FREQ_ON_AC = 1900000;
-        CPU_SCALING_MIN_FREQ_ON_BAT = 0;
+        CPU_SCALING_MIN_FREQ_ON_AC = 800000;
+        CPU_SCALING_MAX_FREQ_ON_AC = 2000000;   # 1900000
+        CPU_SCALING_MIN_FREQ_ON_BAT = 800000;
         CPU_SCALING_MAX_FREQ_ON_BAT = 1500000;
 
         # sudo tlp-stats -g
         INTEL_GPU_MIN_FREQ_ON_AC = 0;
         INTEL_GPU_MIN_FREQ_ON_BAT = 0;
 
-        INTEL_GPU_MAX_FREQ_ON_AC = 800;
-        INTEL_GPU_MAX_FREQ_ON_BAT = 500;
+        INTEL_GPU_MAX_FREQ_ON_AC = 350;
+        INTEL_GPU_MAX_FREQ_ON_BAT = 350;
 
-        INTEL_GPU_BOOST_FREQ_ON_AC = 800;
-        INTEL_GPU_BOOST_FREQ_ON_BAT = 500;
+        INTEL_GPU_BOOST_FREQ_ON_AC = 350;
+        INTEL_GPU_BOOST_FREQ_ON_BAT = 350;
 
         USB_AUTOSUSPEND = 0;
         USB_EXCLUDE_AUDIO = 1; # Exclude Audio Devices from Auto Suspend mode
@@ -430,7 +430,6 @@
     chromium
     vlc
     discord
-    spotify
     ranger
     #gnome.nautilus  # Gnome File Manager
     obs-studio

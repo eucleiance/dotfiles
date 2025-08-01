@@ -5,8 +5,6 @@
     (with pkgs-stable; [
       # Torrent Client
       qbittorrent
-      # Discord w/ Screenshare w/ Audio
-      vesktop
       # File Manager
       xfce.thunar
       # Ebook Reader
@@ -34,6 +32,9 @@
     ])
     ++
     (with pkgs-unstable; [
-
+      # Discord w/ Screenshare w/ Audio
+      vesktop
+      # YT Music
+      ytmdesktop
     ]);
 }
