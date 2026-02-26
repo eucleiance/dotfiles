@@ -15,5 +15,8 @@
       spotifywm
       spotify-qt
       # notion-app
+      cloudflared
+      cloudflare-warp
+      wgcf
     ]);
 }

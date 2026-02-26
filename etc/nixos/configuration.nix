@@ -263,6 +263,17 @@
     enableIPv6 = false;
   };
 
+
+  # Cloudflare-warp 
+  # networking.wg-quick.interfaces = {
+  #   wgcf = {
+  #     configFile = "/etc/wireguard/wgcf.conf";
+  #     autostart = true;
+  #   };
+  # };
+
+
+
   # networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -298,7 +309,7 @@
         CPU_ENERGY_PERF_POLICY_ON_BAT = "performance";
 
         CPU_MIN_PERF_ON_AC = 0;
-        CPU_MAX_PERF_ON_AC = 100;
+        CPU_MAX_PERF_ON_AC = 80;
         CPU_MIN_PERF_ON_BAT = 0;
         CPU_MAX_PERF_ON_BAT = 50;
 
@@ -306,20 +317,21 @@
         CPU_BOOST_ON_BAT = 0;
 
         # sudo tlp-stats -p
-        CPU_SCALING_MIN_FREQ_ON_AC = 800000;
-        CPU_SCALING_MAX_FREQ_ON_AC = 2000000;   # 1900000
+        CPU_SCALING_MIN_FREQ_ON_AC = 800000;    # Min = 800000
+        CPU_SCALING_MAX_FREQ_ON_AC = 2000000;   # Max = 4100000
+
         CPU_SCALING_MIN_FREQ_ON_BAT = 800000;
-        CPU_SCALING_MAX_FREQ_ON_BAT = 1500000;
+        CPU_SCALING_MAX_FREQ_ON_BAT = 2000000;
 
         # sudo tlp-stats -g
         INTEL_GPU_MIN_FREQ_ON_AC = 0;
-        INTEL_GPU_MIN_FREQ_ON_BAT = 0;
+        INTEL_GPU_MIN_FREQ_ON_BAT = 0;  # Min = 350
 
-        INTEL_GPU_MAX_FREQ_ON_AC = 350;
-        INTEL_GPU_MAX_FREQ_ON_BAT = 350;
+        INTEL_GPU_MAX_FREQ_ON_AC = 500;
+        INTEL_GPU_MAX_FREQ_ON_BAT = 500;  # Max = 1100
 
-        INTEL_GPU_BOOST_FREQ_ON_AC = 350;
-        INTEL_GPU_BOOST_FREQ_ON_BAT = 350;
+        INTEL_GPU_BOOST_FREQ_ON_AC = 500;
+        INTEL_GPU_BOOST_FREQ_ON_BAT = 500;
 
         USB_AUTOSUSPEND = 0;
         USB_EXCLUDE_AUDIO = 1; # Exclude Audio Devices from Auto Suspend mode
@@ -339,6 +351,10 @@
 
 
   };
+
+
+
+  services.cloudflare-warp.enable = true;
 
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
@@ -375,6 +391,7 @@
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       firefox
+      firefox-beta
     ];
     shell = pkgs.zsh;
   };
@@ -490,6 +507,15 @@
     wayland
     xwayland
     cliphist # Wayland Clipboard Manager
+
+    # --- Gnome Tiling reqs --- #
+    gnomeExtensions.pop-shell
+    gnomeExtensions.tiling-assistant
+    gnomeExtensions.just-perfection
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.dash-to-dock
+    gnome-extension-manager
+    gnome-tweaks
 
     # --- Hyprland reqs --- #
     gnome-keyring # Makes Password available to other apps

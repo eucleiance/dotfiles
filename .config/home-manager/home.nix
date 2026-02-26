@@ -88,6 +88,9 @@
     enableAutosuggestions = true;
     syntaxHighlighting.enable = false;
     initExtra = '' 
+      export GTK_USE_PORTAL=1
+      export ELECTRON_OZONE_PLATFORM_HINT=wayland
+      export NIXOS_OZONE_WL=1
       export LD_LIBRARY_PATH=/nix/store/$(ls /nix/store | grep -m 1 "gcc" | cut -d '-' -f 1-2)/lib:$LD_LIBRARY_PATH
       bindkey '\t' autosuggest-accept
       bindkey '^f' history-incremental-search-backward

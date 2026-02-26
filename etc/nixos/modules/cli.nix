@@ -45,5 +45,7 @@
     ])
     ++
     (with pkgs-unstable; [
+# yt TUI 
+    youtube-tui
     ]);
 }

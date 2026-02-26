@@ -29,6 +29,10 @@
       stirling-pdf
       # Sound Recorder
       gnome-sound-recorder
+      # Podcasts
+      kdePackages.kasts
+# Flashcards
+      anki
     ])
     ++
     (with pkgs-unstable; [
